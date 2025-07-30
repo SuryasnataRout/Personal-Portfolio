@@ -1,0 +1,119 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: #111; /* Optional: black background */
+}
+
+/* Left side: Your name */
+.name {
+  position: relative;
+  display:inline-block;
+}
+.name img{
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 60px;
+  z-index: 1;
+  width: 100%;
+}
+.name p{
+  /*flex: 1;*/
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  padding: 0 20px;
+  z-index: 2;
+  position: relative;
+}
+
+
+/* Center: Navigation menu */
+.navmenu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Right side: Connect button */
+.nav-connect {
+  padding: 12px 24px;
+  border-radius: 45px;
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+
+  /* 👇 Add these to avoid stretching */
+  display: inline-block;
+  white-space: nowrap;
+  transition: 0.5s;
+}
+
+.nav-connect:hover{
+    transform: scale(1.05);
+}
+.anchor-link{
+  text-decoration: none;
+  color: white;
+}
+.nav-mob-close{
+  display: none;
+}
+.nav-mob-open {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.nav-mob-open{
+  display: none;
+}
+@media (max-width:768px) {
+  /*.navbar{
+    /*margin: 50px;*/
+  
+  .nav-connect{
+    display: none;
+  }
+  .nav-mob-open{
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .nav-mob-close{
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 290px;
+    width: 30px;
+    cursor: pointer;
+  }
+  .navmenu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: #1F0016;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+  }
+  .navmenu li{
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+}

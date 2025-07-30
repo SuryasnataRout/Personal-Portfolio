@@ -1,0 +1,74 @@
+.mywork{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.mywork-title{
+    position: relative;
+}
+.mywork-title h1{
+    padding: 0px 30px;
+    font-size: 45px;
+    font-weight: 500;
+}
+.mywork-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.mywork-container{
+  display: flex;                /* Changed from grid to flex for better control */
+  flex-wrap: nowrap;              /* Allows multiple rows when you add more images */
+  gap: 40px;
+  justify-content: space-between;  /* Align items to the left */
+  padding: 20px;
+}
+.mywork-container img{
+  width: 350px;                 /* Smaller width */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:  transform 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  will-change: transform;
+  border: 4px solid transparent;
+}
+.mywork-container img:hover{
+    transform: scale(1.05);
+    border: 4px solid #ff00ff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+@media (max-width:768px) {
+  .mywork {
+    gap: 50px;
+    margin: 50px 20px;
+    align-items: start;
+  }
+
+  .mywork-title h1 {
+    padding: 0;
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  .mywork-title img {
+    width: 130px;
+    margin-right: -20px;
+  }
+
+  .mywork-container {
+    flex-direction: column;     /* ✅ Stack items vertically */
+    align-items: center;        /* ✅ Center the images */
+    gap: 30px;
+  }
+
+  .mywork-container img {
+    width: 90%;                /* ✅ Make them responsive */
+    height: auto;
+  }
+}
